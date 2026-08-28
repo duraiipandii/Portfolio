@@ -1,59 +1,34 @@
-# Durai Pandi — .NET Backend Software Engineer 3D Portfolio
+# Durai Pandi — .NET Backend Software Engineer Portfolio
 
 A modern, responsive, 3D developer portfolio built for **Durai Pandi** (.NET Backend Software Engineer, Chennai, India). Built with **React + Vite + Tailwind CSS + Three.js + Lucide Icons**.
 
 ---
 
-## 🚀 Quick Deployment Guide for GitHub Pages
+## 🌐 Live GitHub Hosting Instructions
 
-Deploying your portfolio to GitHub Pages takes less than 2 minutes so you can access it from anywhere!
+Your code is fully prepared, built, and committed locally for your repository **`duraiipandii/Portfolio-`**!
 
 ### Step 1: Open Terminal in `portfolio/`
 ```bash
 cd d:\Durai\Personal\Inter\portfolio
 ```
 
-### Step 2: Initialize Git & Commit
+### Step 2: Push Code to GitHub
+Run the command below in your terminal (enter your GitHub credentials or PAT if prompted):
 ```bash
-git init
-git add .
-git commit -m "Initial commit of 3D portfolio"
-git branch -M main
+git push -u origin main
 ```
 
-### Step 3: Create GitHub Repository
-1. Go to [https://github.com/new](https://github.com/new)
-2. Enter Repository Name: `portfolio` (or `durai-portfolio`)
-3. Keep Public and click **Create repository**.
-
-### Step 4: Push to GitHub & Deploy Live
+### Step 3: Deploy to GitHub Pages
+Run the deploy script:
 ```bash
-# Link your repository (replace YOUR_GITHUB_USERNAME with your actual GitHub username)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/portfolio.git
-
-# Push code to GitHub
-git push -u origin main
-
-# Deploy live on GitHub Pages
 npm run deploy
 ```
 
-🎉 Your portfolio will be live at:
-**`https://YOUR_GITHUB_USERNAME.github.io/portfolio/`**
-
 ---
 
-## ⚡ Alternative Free Deployments
-
-### Option A: Vercel (1-Click Deployment)
-1. Go to [vercel.com](https://vercel.com) and sign in with GitHub.
-2. Click **Add New** > **Project** and select your `portfolio` repository.
-3. Click **Deploy**. Vercel will automatically host your portfolio with instant global SSL!
-
-### Option B: Netlify
-1. Go to [netlify.com](https://netlify.com) and sign in.
-2. Click **Add new site** > **Import an existing project**.
-3. Select your repository, set build command to `npm run build` and output directory to `dist`.
+🎉 Your live portfolio will be hosted at:
+👉 **`https://duraiipandii.github.io/Portfolio-/`**
 
 ---
 
@@ -79,7 +54,7 @@ portfolio/
 │   │   ├── ThreeBackground.jsx   # Three.js 3D WebGL particle background
 │   │   └── Footer.jsx            # Copyright & back-to-top button
 │   ├── context/
-│   │   └── ThemeContext.jsx      # Theme switcher context (5 tech themes)
+│   │   └── ThemeContext.jsx      # Tech stack themes (.NET 8/9 Blue, Cloud, AI, Linux)
 │   ├── data/
 │   │   └── portfolioData.js      # Updated ATS resume profile data
 │   ├── App.jsx                   # Root application container
@@ -87,7 +62,7 @@ portfolio/
 │   └── main.jsx                  # React DOM entry point
 ├── .github/workflows/deploy.yml  # GitHub Actions automated deploy script
 ├── index.html                    # SEO head tags & Google fonts
-├── vite.config.js                # Relative base path for GitHub Pages
+├── vite.config.js                # Configured with base: '/Portfolio-/'
 └── package.json                  # Dependencies & gh-pages deploy script
 ```
 

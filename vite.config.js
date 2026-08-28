@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/Portfolio-/', // Target base path for https://duraiipandii.github.io/Portfolio-/
+  base: '/Portfolio/', // Target base path for https://duraiipandii.github.io/Portfolio/
 });
