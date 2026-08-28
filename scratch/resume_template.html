@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Durai Pandi - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 8mm 12mm 8mm 12mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: #1e293b;
+      background: #ffffff;
+      font-size: 9.5pt;
+      line-height: 1.35;
+      -webkit-print-color-adjust: exact;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 6px;
+      margin-bottom: 8px;
+    }
+    .name {
+      font-size: 22pt;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .title {
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0284c7;
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+    .contact-info {
+      font-size: 9pt;
+      color: #475569;
+      margin-top: 4px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .contact-info span {
+      display: inline-flex;
+      align-items: center;
+    }
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 2px;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .summary-text {
+      text-align: justify;
+      color: #334155;
+      font-size: 9.2pt;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3px;
+    }
+    .skill-row {
+      font-size: 9pt;
+      line-height: 1.3;
+    }
+    .skill-category {
+      font-weight: 700;
+      color: #0369a1;
+    }
+    .job {
+      margin-bottom: 8px;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .job-title {
+      font-weight: 700;
+      font-size: 10pt;
+      color: #0f172a;
+    }
+    .company {
+      color: #0284c7;
+      font-weight: 700;
+    }
+    .date-location {
+      font-size: 8.8pt;
+      font-weight: 600;
+      color: #64748b;
+    }
+    .product-tag {
+      font-size: 8.5pt;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 1px;
+      margin-bottom: 3px;
+      font-style: italic;
+    }
+    ul.bullet-list {
+      list-style-type: disc;
+      padding-left: 16px;
+      margin-top: 2px;
+    }
+    ul.bullet-list li {
+      margin-bottom: 2px;
+      color: #334155;
+      text-align: justify;
+      font-size: 9pt;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 9.5pt;
+    }
+    .edu-meta {
+      font-size: 8.8pt;
+      color: #64748b;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="name">DURAI PANDI</div>
+    <div class="title">.NET Backend Software Engineer</div>
+    <div class="contact-info">
+      <span>Chennai, India</span> |
+      <span>+91 8754179662</span> |
+      <span>erduraipandii@gmail.com</span> |
+      <span>linkedin.com/in/duraipandi</span>
+    </div>
+  </div>
+
+  <div class="section-title">Professional Summary</div>
+  <div class="summary-text">
+    Backend-focused .NET Software Engineer with around 4 years of experience building, integrating, deploying and maintaining C#/.NET applications and communication platforms. Strong hands-on experience with C#, .NET 8, ASP.NET Core Web API, Entity Framework/EF Core, SQL, REST APIs, third-party API integrations, production troubleshooting and Linux-based deployments. Experience with AWS (including EC2/Lambda), CI/CD exposure, SMTP/email systems and automation. Seeking backend-focused .NET Software Engineer / Senior .NET Developer opportunities.
+  </div>
+
+  <div class="section-title">Core Technical Skills</div>
+  <div class="skills-grid">
+    <div class="skill-row"><span class="skill-category">Languages & Frameworks:</span> C#, Python, SQL, .NET 8, .NET Core, ASP.NET Core Web API, ASP.NET Web API, REST APIs, OOP</div>
+    <div class="skill-row"><span class="skill-category">Data Access & Databases:</span> Entity Framework / EF Core, Dapper, LINQ, Microsoft SQL Server, MySQL, Database Design & Query Optimization</div>
+    <div class="skill-row"><span class="skill-category">Cloud & DevOps:</span> AWS EC2, CI/CD Exposure, Linux Server, IIS, Windows Server, Nginx Exposure, Production Deployment & Automation</div>
+    <div class="skill-row"><span class="skill-category">Messaging & Integrations:</span> SMTP, MailKit, EASendMail, KEEPA API, Amazon SP-API, Google Sheets API, Third-Party REST API Integration</div>
+    <div class="skill-row"><span class="skill-category">Engineering Practices:</span> Production Support, Root-Cause Analysis, Debugging, High-Volume Data Processing, Agile/Scrum</div>
+  </div>
+
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Software Engineer — <span class="company">Resulticks</span></div>
+      <div class="date-location">Nov 2024 — Present | Chennai, India</div>
+    </div>
+    <div class="product-tag">Product: RESUL — Customer Engagement & Communication Platform</div>
+    <ul class="bullet-list">
+      <li>Build and maintain C#/.NET-based client communication workflows for high-volume transactional and marketing email/SMS delivery.</li>
+      <li>Work with modern .NET application components, REST APIs, database integrations, and production support activities.</li>
+      <li>Migrated application mail-sending library from EASendMail to MailKit, directly improving email delivery success rate and sending speed on Linux-hosted production servers.</li>
+      <li>Designed and developed SMTP domain automation to streamline domain configuration and eliminate manual setup effort for outbound mail delivery.</li>
+      <li>Investigate and resolve client-reported issues and production bugs using root-cause analysis, minimizing disruption to communication delivery and maintaining high system uptime.</li>
+      <li>Deploy code changes and application updates directly to Linux production servers, coordinating releases with minimal downtime.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Software Engineer — <span class="company">Agilensmart Technology Solutions Pvt Ltd</span></div>
+      <div class="date-location">Oct 2022 — Oct 2024 | Chennai, India</div>
+    </div>
+    <div class="product-tag">Products: Amazon Seller Tools — KEEPA Integration, Competitor Intelligence & Bulk Analyzer Tools</div>
+    <ul class="bullet-list">
+      <li>Built C#/.NET automation tools for Amazon FBA and merchant-fulfilled sellers, integrating KEEPA API, Amazon SP-API, and Google Sheets API to automate product research, pricing, and inventory workflows.</li>
+      <li>Developed product history tracking module that accepts JSON queries/ASINs from user input, fetches historical data via KEEPA API, and populates Google Sheets for analysis and reporting.</li>
+      <li>Built stock and price management functionality integrated with Amazon SP-API to refresh inventory, pricing, and stock status from live product data and monitor competitor listings.</li>
+      <li>Generated automated feed files for Amazon Seller Central uploads and developed wholesale bulk analysis software to help sellers identify profitable products across large catalogs.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Education</div>
+  <div class="edu-row">
+    <div>
+      <span class="edu-degree">B.E. in Computer Science and Engineering</span> — Anna University
+    </div>
+    <div class="edu-meta">April 2022 | CGPA: 7.98</div>
+  </div>
+
+</body>
+</html>

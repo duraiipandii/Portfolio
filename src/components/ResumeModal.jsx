@@ -40,7 +40,7 @@ export default function ResumeModal({ isOpen, onClose }) {
 
           <div className="flex items-center gap-3">
             <a
-              href="/Durai_Pandi_Resume.pdf"
+              href={`${import.meta.env.BASE_URL}Durai_Pandi_Resume.pdf`}
               download="Durai_Pandi_Resume.pdf"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg shadow-sm transition-all"
             >
@@ -148,7 +148,7 @@ export default function ResumeModal({ isOpen, onClose }) {
         <div className="p-4 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between shrink-0 text-xs font-mono text-slate-400">
           <span>Press ESC or click close to dismiss</span>
           <a
-            href="/Durai_Pandi_Resume.pdf"
+            href={`${import.meta.env.BASE_URL}Durai_Pandi_Resume.pdf`}
             download="Durai_Pandi_Resume.pdf"
             className="text-cyan-400 hover:underline flex items-center gap-1"
           >

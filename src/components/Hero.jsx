@@ -1,6 +1,7 @@
 import React from 'react';
 import { 
   FileText, 
+  Download,
   Mail, 
   MapPin, 
   ArrowRight, 
@@ -79,18 +80,19 @@ export default function Hero({ onOpenResume }) {
             <div className="pt-2 flex flex-wrap items-center gap-4">
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-xl btn-3d-cyan text-slate-950 font-extrabold text-sm shadow-xl cursor-pointer"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl btn-3d-cyan text-slate-950 font-extrabold text-sm shadow-xl cursor-pointer"
               >
                 <FileText className="w-4 h-4" />
                 <span>View Resume</span>
               </button>
 
               <a
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/80 hover:border-cyan-500/50 shadow-lg transition-all group"
+                href={`${import.meta.env.BASE_URL}Durai_Pandi_Resume.pdf`}
+                download="Durai_Pandi_Resume.pdf"
+                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/80 hover:border-cyan-500/50 shadow-lg transition-all group"
               >
-                <span>Contact Me</span>
-                <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
+                <Download className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+                <span>Download PDF</span>
               </a>
 
               {/* Social Icon Pills */}
