@@ -67,12 +67,12 @@ export default function Skills() {
         {/* Filter Controls & Search */}
         <div className="mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Category Tabs */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 w-full md:w-auto">
+          <div className="flex items-center justify-start md:justify-start gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 scrollbar-none">
             {categoryNames.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-xl text-xs font-mono transition-all duration-200 cursor-pointer ${
+                className={`px-3.5 py-2 rounded-xl text-xs font-mono transition-all duration-200 cursor-pointer whitespace-nowrap shrink-0 ${
                   selectedCategory === cat
                     ? 'btn-3d-cyan text-slate-950 font-bold shadow-lg'
                     : 'bg-slate-900/90 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800'

@@ -27,29 +27,29 @@ export default function ResumeModal({ isOpen, onClose }) {
       <div className="relative w-full max-w-4xl max-h-[90vh] bg-[#0c101c] border border-slate-800 rounded-2xl shadow-2xl flex flex-col overflow-hidden text-slate-200 font-sans">
         
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-6 py-4 bg-slate-900/90 border-b border-slate-800 shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
-              <FileText className="w-5 h-5" />
+        <div className="flex items-center justify-between px-4 sm:px-6 py-3 sm:py-4 bg-slate-900/90 border-b border-slate-800 shrink-0 gap-2">
+          <div className="flex items-center gap-2.5 min-w-0">
+            <div className="p-1.5 sm:p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 shrink-0">
+              <FileText className="w-4 sm:w-5 h-4 sm:h-5" />
             </div>
-            <div>
-              <h3 className="text-lg font-bold text-white leading-tight">{personalDetails.name} — Resume</h3>
-              <p className="text-xs font-mono text-cyan-400">{personalDetails.title}</p>
+            <div className="truncate">
+              <h3 className="text-sm sm:text-lg font-bold text-white leading-tight truncate">{personalDetails.name} — Resume</h3>
+              <p className="text-[10px] sm:text-xs font-mono text-cyan-400 truncate">{personalDetails.title}</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 shrink-0">
             <a
               href={`${import.meta.env.BASE_URL}Durai_Pandi_Resume.pdf`}
               download="Durai_Pandi_Resume.pdf"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs font-mono font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg shadow-sm transition-all"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 sm:px-4 sm:py-2 text-[11px] sm:text-xs font-mono font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg shadow-sm transition-all whitespace-nowrap"
             >
-              <Download className="w-4 h-4" />
+              <Download className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span>Download PDF</span>
             </a>
             <button
               onClick={onClose}
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
+              className="p-1.5 sm:p-2 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition-colors"
               aria-label="Close modal"
             >
               <X className="w-5 h-5" />
@@ -58,13 +58,13 @@ export default function ResumeModal({ isOpen, onClose }) {
         </div>
 
         {/* Scrollable Formatted Resume Body */}
-        <div className="p-6 sm:p-8 overflow-y-auto space-y-8 text-sm leading-relaxed">
+        <div className="p-4 sm:p-8 overflow-y-auto space-y-6 sm:space-y-8 text-xs sm:text-sm leading-relaxed">
           
           {/* Resume Title Header */}
-          <div className="text-center pb-6 border-b border-slate-800 space-y-2">
-            <h1 className="text-3xl font-extrabold text-white tracking-tight">{personalDetails.name}</h1>
-            <div className="text-sm font-semibold text-cyan-400 font-mono">{personalDetails.title}</div>
-            <div className="flex flex-wrap items-center justify-center gap-4 text-xs font-mono text-slate-400 pt-1">
+          <div className="text-center pb-5 sm:pb-6 border-b border-slate-800 space-y-2">
+            <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">{personalDetails.name}</h1>
+            <div className="text-xs sm:text-sm font-semibold text-cyan-400 font-mono">{personalDetails.title}</div>
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 text-[11px] sm:text-xs font-mono text-slate-400 pt-1">
               <span className="flex items-center gap-1"><MapPin className="w-3.5 h-3.5 text-cyan-400" /> {personalDetails.location}</span>
               <span className="flex items-center gap-1"><Mail className="w-3.5 h-3.5 text-cyan-400" /> {personalDetails.email}</span>
               <span className="flex items-center gap-1"><Phone className="w-3.5 h-3.5 text-cyan-400" /> {personalDetails.phone}</span>

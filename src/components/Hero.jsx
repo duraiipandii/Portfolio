@@ -77,10 +77,10 @@ export default function Hero({ onOpenResume }) {
             </div>
 
             {/* CTAs */}
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-2 flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center gap-3 sm:gap-4">
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl btn-3d-cyan text-slate-950 font-extrabold text-sm shadow-xl cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl btn-3d-cyan text-slate-950 font-extrabold text-sm shadow-xl cursor-pointer w-full sm:w-auto"
               >
                 <FileText className="w-4 h-4" />
                 <span>View Resume</span>
@@ -89,14 +89,14 @@ export default function Hero({ onOpenResume }) {
               <a
                 href={`${import.meta.env.BASE_URL}Durai_Pandi_Resume.pdf`}
                 download="Durai_Pandi_Resume.pdf"
-                className="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/80 hover:border-cyan-500/50 shadow-lg transition-all group"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-slate-200 hover:text-white font-semibold text-sm border border-slate-700/80 hover:border-cyan-500/50 shadow-lg transition-all group w-full sm:w-auto"
               >
                 <Download className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
                 <span>Download PDF</span>
               </a>
 
               {/* Social Icon Pills */}
-              <div className="flex items-center gap-2.5 ml-auto sm:ml-0">
+              <div className="flex items-center justify-center gap-2.5 pt-2 sm:pt-0 sm:ml-auto">
                 <a
                   href={personalDetails.linkedin}
                   target="_blank"
