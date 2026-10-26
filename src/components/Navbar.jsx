@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, ChevronRight, Palette, Check } from 'lucide-react';
+import { Menu, X, FileText, ChevronRight, Palette, Check, Sparkles } from 'lucide-react';
 import { personalDetails } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 
@@ -60,12 +60,12 @@ export default function Navbar({ onOpenResume }) {
             href="#"
             className="group flex items-center gap-2 text-xl font-bold font-mono text-white transition-colors"
           >
-            <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 group-hover:border-cyan-400 group-hover:bg-cyan-500/20 transition-all">
+            <span className="flex items-center justify-center w-8 h-8 rounded-lg bg-purple-500/15 border border-purple-500/30 text-purple-400 group-hover:border-purple-400 group-hover:bg-purple-500/25 transition-all">
               &lt;/&gt;
             </span>
             <span className="tracking-tight">
               {personalDetails.name.split(' ')[0]}
-              <span className="text-cyan-400">.{personalDetails.name.split(' ')[1]}</span>
+              <span className="text-purple-400">.{personalDetails.name.split(' ')[1]}</span>
             </span>
           </a>
 
@@ -79,7 +79,7 @@ export default function Navbar({ onOpenResume }) {
                   href={item.href}
                   className={`px-4 py-1.5 text-sm font-medium rounded-full transition-all duration-200 ${
                     isActive
-                      ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 shadow-sm'
+                      ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40 shadow-sm'
                       : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'
                   }`}
                 >
@@ -99,14 +99,14 @@ export default function Navbar({ onOpenResume }) {
                 className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-xs font-mono text-slate-300 transition-all"
                 aria-label="Theme Palette"
               >
-                <Palette className="w-4 h-4 text-cyan-400" />
+                <Palette className="w-4 h-4 text-purple-400" />
                 <span className="hidden sm:inline">{currentTheme.name}</span>
               </button>
 
               {themeMenuOpen && (
-                <div className="absolute right-0 mt-2 w-52 bg-[#0a0f1d] border border-slate-800 rounded-xl shadow-2xl p-2 z-50 space-y-1 animate-in fade-in duration-150">
+                <div className="absolute right-0 mt-2 w-64 bg-[#0a0f1d] border border-slate-800 rounded-xl shadow-2xl p-2 z-50 space-y-1 animate-in fade-in duration-150">
                   <div className="text-[10px] font-mono text-slate-400 px-3 py-1 uppercase tracking-wider">
-                    Select Tech Theme
+                    Select Developer Palette
                   </div>
                   {themes.map((t) => (
                     <button
@@ -117,7 +117,7 @@ export default function Navbar({ onOpenResume }) {
                       }}
                       className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-mono transition-all ${
                         currentTheme.id === t.id
-                          ? 'bg-cyan-500/20 text-cyan-300 font-bold border border-cyan-500/30'
+                          ? 'bg-purple-500/20 text-purple-300 font-bold border border-purple-500/30'
                           : 'text-slate-300 hover:bg-slate-800/80'
                       }`}
                     >
@@ -126,9 +126,9 @@ export default function Navbar({ onOpenResume }) {
                           className="w-3 h-3 rounded-full border border-slate-700"
                           style={{ backgroundColor: t.accent }}
                         />
-                        <span>{t.name}</span>
+                        <span className="truncate">{t.name}</span>
                       </div>
-                      {currentTheme.id === t.id && <Check className="w-3.5 h-3.5 text-cyan-400" />}
+                      {currentTheme.id === t.id && <Check className="w-3.5 h-3.5 text-purple-400" />}
                     </button>
                   ))}
                 </div>
@@ -138,9 +138,9 @@ export default function Navbar({ onOpenResume }) {
             {/* Resume CTA */}
             <button
               onClick={onOpenResume}
-              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-cyan-400 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/40 hover:border-cyan-400 rounded-lg transition-all duration-200 shadow-sm shadow-cyan-950/40 group cursor-pointer"
+              className="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-purple-300 bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/40 hover:border-purple-400 rounded-lg transition-all duration-200 shadow-sm shadow-purple-950/40 group cursor-pointer"
             >
-              <FileText className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <FileText className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
               <span>Resume</span>
             </button>
 
@@ -153,15 +153,15 @@ export default function Navbar({ onOpenResume }) {
               className="p-2 text-slate-300 bg-slate-900 border border-slate-800 rounded-lg text-xs"
               aria-label="Theme Palette"
             >
-              <Palette className="w-4 h-4 text-cyan-400" />
+              <Palette className="w-4 h-4 text-purple-400" />
             </button>
 
             <button
               onClick={onOpenResume}
-              className="p-2 text-cyan-400 bg-cyan-500/10 border border-cyan-500/30 rounded-lg text-xs font-mono flex items-center gap-1"
+              className="p-2 text-purple-300 bg-purple-500/10 border border-purple-500/30 rounded-lg text-xs font-mono flex items-center gap-1"
               aria-label="View Resume"
             >
-              <FileText className="w-4 h-4" />
+              <FileText className="w-4 h-4 text-purple-400" />
               <span>CV</span>
             </button>
 
@@ -189,12 +189,12 @@ export default function Navbar({ onOpenResume }) {
               }}
               className={`flex items-center gap-2 p-2 rounded-lg text-xs font-mono ${
                 currentTheme.id === t.id
-                  ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 font-bold'
+                  ? 'bg-purple-500/20 text-purple-300 border border-purple-500/40 font-bold'
                   : 'bg-slate-900 text-slate-300 border border-slate-800'
               }`}
             >
               <span className="w-3 h-3 rounded-full" style={{ backgroundColor: t.accent }} />
-              <span>{t.name}</span>
+              <span className="truncate">{t.name}</span>
             </button>
           ))}
         </div>
@@ -208,7 +208,7 @@ export default function Navbar({ onOpenResume }) {
               key={item.name}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-4 py-3 text-sm font-medium text-slate-300 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg border border-transparent hover:border-cyan-500/20 transition-all"
+              className="flex items-center justify-between px-4 py-3 text-sm font-medium text-slate-300 hover:text-purple-400 hover:bg-purple-500/10 rounded-lg border border-transparent hover:border-purple-500/20 transition-all"
             >
               <span>{item.name}</span>
               <ChevronRight className="w-4 h-4 text-slate-500" />
@@ -220,7 +220,7 @@ export default function Navbar({ onOpenResume }) {
                 setMobileMenuOpen(false);
                 onOpenResume();
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-semibold text-cyan-300 bg-cyan-500/20 border border-cyan-500/40 rounded-lg"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 text-sm font-semibold text-purple-300 bg-purple-500/20 border border-purple-500/40 rounded-lg"
             >
               <FileText className="w-4 h-4" />
               <span>View & Download Resume PDF</span>
